@@ -1,0 +1,50 @@
+{
+  "name": "@peterquentin/vuex-orm-crud-api",
+  "version": "0.1",
+  "description": "Vuex-ORM Plugin to sync the data against your own implementation of the request() on Model.",
+  "main": "dist/index.js",
+  "scripts": {
+    "watch": "webpack --watch --mode=production",
+    "build": "webpack --mode=production",
+    "lint": "eslint src/**/*.js test/**/*.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git+https://github.com/peterquentin/vuex-orm-crud-api.git"
+  },
+  "keywords": [
+    "vue",
+    "vuex",
+    "vuex-plugin",
+    "vuex-orm",
+    "vuex-orm-plugin",
+    "crud-api"
+  ],
+  "author": "Peter Quentin",
+  "license": "MIT",
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "dependencies": {
+    "@vuex-orm/core": "^0.26.4",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/runtime": "^7.3.4",
+    "babel-core": "6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.15.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^21.27.2",
+    "jest": "^23.6.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  }
+}
