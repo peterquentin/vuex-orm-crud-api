@@ -18,6 +18,21 @@ export default class Action {
     /**
      * Add Model Interface to each model
      */
+
+    model.getCrudConfig = () => {
+      if (!model.crudConf) {
+        model.crudConf = merge({}, {
+          $fetch: '$get',
+          $get: '$get',
+          $create: '$put',
+          $update: '$get',
+          $delete: model.attr([]),
+        }, model.crudConf());
+      }
+
+      return model.crudConf;
+    }
+
     model.getFields = () => {
       if (!model.cachedFields) {
         model.cachedFields = merge({}, {

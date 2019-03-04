@@ -15,7 +15,7 @@ export default class Update extends Action {
 
     const context = Context.getInstance();
     const model = context.getModelFromState(state);
-    const request = model.request(params).save();
+    const request = model.request('update', params);
 
     this.onRequest(model, params);
     request

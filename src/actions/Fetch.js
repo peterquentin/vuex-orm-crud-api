@@ -10,7 +10,7 @@ export default class Fetch extends Action {
   static async call ({ state, commit }, params = {}) {
     const context = Context.getInstance();
     const model = context.getModelFromState(state);
-    const request = model.request(params).$get();
+    const request = model.request('fetch', params);
 
     this.onRequest(commit);
     request

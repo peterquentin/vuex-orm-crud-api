@@ -14,7 +14,7 @@ export default class Create extends Action {
 
     const context = Context.getInstance();
     const model = context.getModelFromState(state);
-    const request = model.request(params).save();
+    const request = model.request('create', params);
 
     this.onRequest(commit);
     request
