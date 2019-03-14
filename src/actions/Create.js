@@ -18,7 +18,7 @@ export default class Create extends Action {
 
     this.onRequest(commit);
     request
-      .then(data => this.onSuccess(commit, model, data.data))
+      .then(data => this.onSuccess(commit, model, data))
       .catch(error => this.onError(commit, error))
 
     return request;

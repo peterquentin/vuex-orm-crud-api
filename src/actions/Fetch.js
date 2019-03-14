@@ -13,9 +13,14 @@ export default class Fetch extends Action {
     const request = model.request('fetch', params);
 
     this.onRequest(commit);
+
     request
-      .then(data => this.onSuccess(commit, model, data))
       .catch(error => this.onError(commit, error))
+
+    if (typeof params.promise === 'undefined') {
+      request
+        .then(data => this.onSuccess(commit, model, data))
+    }
 
     return request;
   }
