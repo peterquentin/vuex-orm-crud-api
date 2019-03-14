@@ -1,6 +1,6 @@
 {
   "name": "@peterquentin/vuex-orm-crud-api",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Vuex-ORM Plugin to sync the data against your own implementation of the request() on Model.",
   "main": "dist/index.js",
   "scripts": {
